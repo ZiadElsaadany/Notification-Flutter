@@ -38,7 +38,7 @@ Future<void> firebaseNotificationBackgroundHandler(RemoteMessage remoteMessage) 
   }
 }
 ```
-# Notification Click Handling (onMessageOpenedApp)
+# Notification Click Handling
 Handle notification clicks when the app is opened:
 
 ```dart
