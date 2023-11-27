@@ -38,3 +38,15 @@ Future<void> firebaseNotificationBackgroundHandler(RemoteMessage remoteMessage) 
   }
 }
 ```
+# Notification Click Handling (onMessageOpenedApp)
+Handle notification clicks when the app is opened:
+
+```dart
+FirebaseMessaging.onMessageOpenedApp.listen((event) {
+  Constants.toast("Open App");
+  debugPrint("On Home");
+  debugPrint(event.data.toString());
+});
+```
+
+
