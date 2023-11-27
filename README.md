@@ -10,3 +10,16 @@ To obtain the FCM token for a device, use the following code:
 Future<String?> getTokenFromFirebase() async {
   return await FirebaseMessaging.instance.getToken();
 }
+```
+# AndroidManifest.xml Configuration
+Add the following `<intent-filter>` to your main activity in `AndroidManifest.xml`:
+
+```dart
+ <intent-filter>
+        ho <action android:name="com.google.firebase.MESSAGING_EVENT" />
+</intent-filter>
+<intent-filter>
+    <action android:name="FLUTTER_NOTIFICATION_CLICK" />
+    <category android:name="android.intent.category.DEFAULT" />
+</intent-filter>
+```
