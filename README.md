@@ -23,3 +23,18 @@ Add the following `<intent-filter>` to your main activity in `AndroidManifest.xm
     <category android:name="android.intent.category.DEFAULT" />
 </intent-filter>
 ```
+# Background Notification Handling
+Handle background notifications by registering a callback function:
+
+```dart
+FirebaseMessaging.onBackgroundMessage(firebaseNotificationBackgroundHandler);
+
+Future<void> firebaseNotificationBackgroundHandler(RemoteMessage remoteMessage) async {
+  // Handle background notification
+  debugPrint("on background");
+  Constants.toast("on background");
+  if (kDebugMode) {
+    print(remoteMessage.messageId);
+  }
+}
+```
