@@ -16,7 +16,7 @@ Add the following `<intent-filter>` to your main activity in `AndroidManifest.xm
 
 ```dart
  <intent-filter>
-        ho <action android:name="com.google.firebase.MESSAGING_EVENT" />
+         <action android:name="com.google.firebase.MESSAGING_EVENT" />
 </intent-filter>
 <intent-filter>
     <action android:name="FLUTTER_NOTIFICATION_CLICK" />
